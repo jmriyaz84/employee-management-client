@@ -23,4 +23,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Demo
-![Employee Management System](https://github.com/jmriyaz84/student-management-ui/blob/master/src/EMS.gif)
+![Employee Management System](https://github.com/jmriyaz84/employee-management-client/blob/master/src/EMS.gif)
