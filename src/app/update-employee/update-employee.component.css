@@ -1,0 +1,10 @@
+label {
+  font-weight: bold;
+  color: #435d7d;
+}
+
+.auto-overflow {
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

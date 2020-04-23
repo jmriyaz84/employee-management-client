@@ -1,0 +1,15 @@
+.title {
+  text-align: center;
+  background-color: #435d7d;
+  color: white;
+  font-size: larger;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #676767;
+  text-align: center;
+  color: white;
+}
