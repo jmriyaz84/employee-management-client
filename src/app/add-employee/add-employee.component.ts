@@ -12,6 +12,10 @@ import { AlertService } from '../_alert';
 export class AddEmployeeComponent implements OnInit {
   isValid: boolean;
   employee: Employee = new Employee();
+  options = {
+    autoClose: true,
+    keepAfterRouteChange: true,
+  };
   constructor(
     private employeeService: EmployeeService,
     private router: Router,
@@ -58,7 +62,21 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   showEmployees() {
-    this.alertService.success('Employee saved successfully');
+    this.alertService.success('Employee saved successfully', this.options);
     this.router.navigate(['/employees']);
+  }
+
+  calculateAge() {
+    const dob = this.employee.dateOfBirth;
+    const dobArray = dob.split('-');
+    const age = Number(new Date().getFullYear()) - Number(dobArray[0]);
+    this.employee.age = age;
+  }
+
+  calculateYearOfExp() {
+    const doj = this.employee.dateOfJoin;
+    const dojArray = doj.split('-');
+    const yearOfExp = Number(new Date().getFullYear()) - Number(dojArray[0]);
+    this.employee.yearOfExperience = yearOfExp;
   }
 }

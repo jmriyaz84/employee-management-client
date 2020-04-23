@@ -13,8 +13,8 @@ export class UpdateEmployeeComponent implements OnInit {
   id: number;
   employee: Employee;
   options = {
-    autoClose: false,
-    keepAfterRouteChange: false,
+    autoClose: true,
+    keepAfterRouteChange: true,
   };
   constructor(
     private route: ActivatedRoute,
@@ -48,10 +48,7 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   showEmployees(response) {
-    this.alertService.success(
-      `Employee ${this.employee.firstName} ${this.employee.lastName}  updated successfully`,
-      this.options
-    );
+    this.alertService.success(`Employee updated successfully`, this.options);
     this.router.navigate(['/employees']);
   }
 }

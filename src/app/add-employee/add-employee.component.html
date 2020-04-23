@@ -33,11 +33,13 @@
           required
           [(ngModel)]="employee.dateOfBirth"
           placeholder="Date of Birth"
+          (blur)="calculateAge()"
         />
       </div>
       <div class="form-group col-md-6">
         <label>Age</label>
         <input
+          readonly
           type="number"
           class="form-control"
           name="age"
@@ -56,11 +58,13 @@
           required
           [(ngModel)]="employee.dateOfJoin"
           placeholder="Date of Join"
+          (blur)="calculateYearOfExp()"
         />
       </div>
       <div class="form-group col-md-6">
         <label>Experience</label>
         <input
+          readonly
           type="number"
           class="form-control"
           name="experience"
